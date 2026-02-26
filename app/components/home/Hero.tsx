@@ -1,3 +1,5 @@
+import { Form } from "react-router";
+
 export default function Hero() {
   return (
     <section className="relative h-[600px] w-full flex items-center justify-center overflow-hidden">
@@ -21,31 +23,31 @@ export default function Hero() {
               Connect with the best DJs, MCs, Decorators, and Rentals for your
               next celebration.
             </p>
-            <div className="bg-white p-2 rounded-xl shadow-2xl flex flex-col md:flex-row gap-2 max-w-3xl mx-auto">
+               {/* --- SEARCH FORM START --- */}
+            <Form action="/search" method="get" className="bg-white p-2 rounded-xl shadow-2xl flex flex-col md:flex-row gap-2 max-w-3xl mx-auto">
               <div className="flex-1 flex items-center px-4 gap-3 border-b md:border-b-0 md:border-r border-gray-100">
-                <span className="material-symbols-outlined text-gray-400">
-                  search
-                </span>
+                <span className="material-symbols-outlined text-gray-400">search</span>
                 <input
+                  name="q" // This name="q" is crucial
                   className="w-full border-none focus:ring-0 text-sm py-4 outline-none"
                   placeholder="What are you looking for?"
                   type="text"
                 />
               </div>
               <div className="flex-1 flex items-center px-4 gap-3">
-                <span className="material-symbols-outlined text-gray-400">
-                  location_on
-                </span>
+                <span className="material-symbols-outlined text-gray-400">location_on</span>
+                {/* We aren't using location in global search yet, but we keep the UI */}
                 <input
                   className="w-full border-none focus:ring-0 text-sm py-4 outline-none"
                   placeholder="Location (e.g. Ikeja, Lagos)"
                   type="text"
                 />
               </div>
-              <button className="bg-primary text-white font-bold px-8 py-4 rounded-lg hover:bg-primary/90 transition-all cursor-pointer">
+              <button type="submit" className="bg-primary text-white font-bold px-8 py-4 rounded-lg hover:bg-primary/90 transition-all cursor-pointer">
                 Search Services
               </button>
-            </div>
+            </Form>
+            {/* --- SEARCH FORM END --- */}
           </div>
         </section>
   );

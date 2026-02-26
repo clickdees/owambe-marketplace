@@ -39,3 +39,8 @@
     @apply bg-background-dark text-white;
   }
 }
+
+/* custom styles */
+.btn, button{cursor: pointer;}
+article p{margin: 5% 0; font-size: 1.2rem;}    
+article h2{margin: 5% 0; font-size: 1.4rem;}    

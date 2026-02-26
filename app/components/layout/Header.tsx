@@ -14,30 +14,32 @@ export default function Header() {
               </span>
             </div>
             <h1 className="text-xl font-extrabold tracking-tight text-accent-purple dark:text-white uppercase italic">
-              Owambe<span className="text-primary not-italic">Hub</span>
+              <a href="/">Owambe<span className="text-primary not-italic">Hub</span></a>
             </h1>
           </div>
           <nav className="hidden md:flex items-center gap-8">
-            <Link className="text-sm font-semibold hover:text-primary transition-colors" to="#">
+            <Link className="text-sm font-semibold hover:text-primary transition-colors" to="/services">
               Find Services
             </Link>
-            <Link className="text-sm font-semibold hover:text-primary transition-colors" to="#">
+            <Link className="text-sm font-semibold hover:text-primary transition-colors" to="/become-vendor">
               Become a Vendor
             </Link>
-            <Link className="text-sm font-semibold hover:text-primary transition-colors" to="#">
+            {/* <Link className="text-sm font-semibold hover:text-primary transition-colors" to="#">
               Pricing
-            </Link>
-            <Link className="text-sm font-semibold hover:text-primary transition-colors" to="#">
+            </Link> */}
+            <Link className="text-sm font-semibold hover:text-primary transition-colors" to="/blog">
               Blog
             </Link>
           </nav>
           <div className="flex items-center gap-4">
-            <button className="hidden sm:block text-sm font-bold px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition-colors">
+            {/* <button className="hidden sm:block text-sm font-bold px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition-colors">
               Log In
             </button>
             <button className="bg-primary text-white text-sm font-bold px-6 py-2.5 rounded-lg shadow-lg shadow-primary/20 hover:scale-105 transition-transform active:scale-95">
               Sign Up
-            </button>
+            </button> */}
+            <a href="https://owambe-demo.myshopify.com/customer_authentication/redirect?locale=en&region_country=US" className="bg-primary text-white text-sm font-bold px-6 py-2.5 rounded-lg shadow-lg shadow-primary/20 hover:scale-105 transition-transform active:scale-95">Log In</a>
+            
           </div>
         </div>
     </header>
